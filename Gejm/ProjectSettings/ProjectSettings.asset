@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 27
-  productGUID: 5bd214567fc0d9742a751401bff42a35
+  productGUID: 05f47e4de5ed3904bb59aa9fdcb68d56
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -681,10 +681,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 324aa6f8-195c-4cfc-93a4-d1330e8beef9
+  cloudProjectId: 13515416-6ce1-480a-86ce-120768670b0b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Gejm 2024-06-20_21-58-32
+  projectName: Gejm 2024-06-25_18-00-21
   organizationId: squally123
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
