@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Dash_1_0: 2815885173669503535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

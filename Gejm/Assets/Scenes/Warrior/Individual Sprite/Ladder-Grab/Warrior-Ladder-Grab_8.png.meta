@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior-Ladder-Grab_8_0: -8188776458582231655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

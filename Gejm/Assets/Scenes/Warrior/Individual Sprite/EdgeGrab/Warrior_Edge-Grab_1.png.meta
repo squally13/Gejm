@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Edge-Grab_1_0: -8413500225750453236
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Crouch_2_0: 3016482456286417065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

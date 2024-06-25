@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Jump_2_0: -7981183131136115004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

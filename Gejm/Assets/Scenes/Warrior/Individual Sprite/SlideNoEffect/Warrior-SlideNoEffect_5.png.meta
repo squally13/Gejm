@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior-SlideNoEffect_5_0: -244811301125546843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
