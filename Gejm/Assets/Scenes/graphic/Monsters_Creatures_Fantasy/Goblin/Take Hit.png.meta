@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: bb7ef25714c2b044ca5e8381883d27ae
+guid: bda359ad2122c3c4e9322977de5eb4db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8327157920008556700
-    second: Warrior_Attack_12_0
+      213: -7500690451134026123
+    second: Take Hit_0
   - first:
-      213: -8109365874734072965
-    second: Warrior_Attack_12_1
+      213: -889859373511162655
+    second: Take Hit_1
+  - first:
+      213: -3088938797480143695
+    second: Take Hit_2
+  - first:
+      213: -9206091644520726168
+    second: Take Hit_3
+  - first:
+      213: 6190067908364298721
+    second: Take Hit_4
+  - first:
+      213: 6935486272599230866
+    second: Take Hit_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Warrior_Attack_12_0
+      name: Take Hit_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 41
-        height: 42
+        x: 57
+        y: 48
+        width: 35
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c90d0b25202009370800000000000000
-      internalID: 8327157920008556700
+      spriteID: 57eedf966c138e790800000000000000
+      internalID: -7500690451134026123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior_Attack_12_1
+      name: Take Hit_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 15
-        width: 9
-        height: 16
+        x: 207
+        y: 48
+        width: 35
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +150,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7bfcc2c3beb57f80800000000000000
-      internalID: -8109365874734072965
+      spriteID: 1e4c0dd4d9596a3f0800000000000000
+      internalID: -889859373511162655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Take Hit_2
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 65
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b416439782e125d0800000000000000
+      internalID: -3088938797480143695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Take Hit_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 48
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86186aedc646d3080800000000000000
+      internalID: -9206091644520726168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Take Hit_4
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 64
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9699d57f987e550800000000000000
+      internalID: 6190067908364298721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Take Hit_5
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 48
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29900e6e40ccf3060800000000000000
+      internalID: 6935486272599230866
       vertices: []
       indices: 
       edges: []
@@ -154,9 +250,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Warrior_Attack_12_0: 8327157920008556700
-      Warrior_Attack_12_1: -8109365874734072965
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
