@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class SkeletonWalk : StateMachineBehaviour
 {
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    //onstateenter is called when a transition starts and the state machine starts to evaluate this state
+    override public void onstateenter(animator animator, animatorstateinfo stateinfo, int layerindex)
+    {
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    //onstateupdate is called on each update frame between onstateenter and onstateexit callbacks
+    override public void onstateupdate(animator animator, animatorstateinfo stateinfo, int layerindex)
+    {
+
+    }
+
+    //onstateexit is called when a transition ends and the state machine finishes evaluating this state
+    override public void onstateexit(animator animator, animatorstateinfo stateinfo, int layerindex)
+    {
+
+    }
 
 }
