@@ -12,6 +12,13 @@ public class PlayerCombat : MonoBehaviour
 
     private PlayerMovement playerMovement;  // Reference to PlayerMovement
 
+    AudioMan audioMan;
+
+    private void Awake()
+    {
+        audioMan = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioMan>();
+    }
+
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();  // Get the PlayerMovement component
@@ -30,6 +37,8 @@ public class PlayerCombat : MonoBehaviour
     {
         animator.SetTrigger("Attack");
         playerMovement.isAttacking = true;  // Set isAttacking to true
+
+        audioMan.PlaySFX(audioMan.slash);
 
         // Stop the player from moving immediately
         playerMovement.StopMovement();

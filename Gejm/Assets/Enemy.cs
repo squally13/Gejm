@@ -8,6 +8,13 @@ public class Enemy : MonoBehaviour
     
     public int maxHealth = 100;
     int currentHealth;
+
+    AudioMan audioMan;
+
+    private void Awake()
+    {
+        audioMan = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioMan>();
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -17,9 +24,12 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        audioMan.PlaySFX(audioMan.enemyhit);
+
         currentHealth -= damage;
 
         animator.SetTrigger("Hurt");
+
 
         if (currentHealth <= 0)
         {
@@ -35,5 +45,7 @@ public class Enemy : MonoBehaviour
 
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+        audioMan.PlaySFX(audioMan.enemydeath);
     }
 }
