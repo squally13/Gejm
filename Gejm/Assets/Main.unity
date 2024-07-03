@@ -149,9 +149,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.318
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 1368052638}
   m_Layer: 0
   m_Name: AudioMan
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   pcdeath: {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
   pchit: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemydeath: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
-  enemyhit: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+  enemyhit: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   slash: {fileID: 8300000, guid: 88b1cbe3caa3fee4b8b103b5edd7aba9, type: 3}
 --- !u!4 &1368052639
 Transform:
