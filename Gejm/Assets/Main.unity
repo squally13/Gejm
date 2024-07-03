@@ -245,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 495851460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.281, y: 0.157, z: 0}
+  m_LocalPosition: {x: 0.349, y: 0.157, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2238,6 +2238,7 @@ MonoBehaviour:
   controller: {fileID: 2041834492}
   animator: {fileID: 2041834486}
   runSpeed: 40
+  isAttacking: 0
 --- !u!114 &2041834494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,7 +2253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2041834486}
   AttackPoint: {fileID: 495851461}
-  AttackRange: 0.5
+  AttackRange: 0.68
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
