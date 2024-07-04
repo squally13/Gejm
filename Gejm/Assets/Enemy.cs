@@ -44,6 +44,13 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isDead", true);
 
         GetComponent<Collider2D>().enabled = false;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+        }
+
         this.enabled = false;
 
         audioMan.PlaySFX(audioMan.enemydeath);
