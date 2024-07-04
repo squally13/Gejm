@@ -5,6 +5,8 @@ using UnityEngine;
 public class SkeletonWalk : StateMachineBehaviour
 {
     public float speed = 0.1f;
+    public float attackRange = 1f;
+
     private Transform player;
     private Rigidbody2D rb;
     FlipEnemy flipenemy;
@@ -26,12 +28,17 @@ public class SkeletonWalk : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 
         rb.MovePosition(newPos);
+
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        animator.ResetTrigger("Attack");
         
     }
 

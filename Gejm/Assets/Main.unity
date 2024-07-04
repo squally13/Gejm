@@ -7164,6 +7164,7 @@ GameObject:
   - component: {fileID: 1962382468}
   - component: {fileID: 1962382467}
   - component: {fileID: 1962382469}
+  - component: {fileID: 1962382470}
   m_Layer: 6
   m_Name: Skeleton_Idle
   m_TagString: Enemy
@@ -7349,7 +7350,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1962382464}
   maxHealth: 100
-  player: {fileID: 2041834488}
+--- !u!114 &1962382470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962382463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08f6d6aba7866a48be89f7da2b6ced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Warrior_Idle_1_0: {fileID: 2041834488}
   isFlipped: 0
 --- !u!1 &2041834485
 GameObject:
