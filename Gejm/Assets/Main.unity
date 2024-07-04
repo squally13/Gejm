@@ -7349,6 +7349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1962382464}
   maxHealth: 100
+  player: {fileID: 2041834488}
+  isFlipped: 0
 --- !u!1 &2041834485
 GameObject:
   m_ObjectHideFlags: 0
