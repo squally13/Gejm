@@ -12,18 +12,23 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
-    public bool isAttacking = false;  // New variable to check if attacking
+    public bool isAttacking = false;  // Variable to check if attacking
+    public bool isDead = false;  // Variable to check if dead
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        // Initialize any necessary components or variables here
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!isAttacking)  // Check if the player is attacking
+        if (isDead)
+        {
+            horizontalMove = 0;  // Stop movement if dead
+            return;
+        }
+
+        if (!isAttacking)
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         }
@@ -34,13 +39,13 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump") && !isAttacking)  // Allow jumping only if not attacking
+        if (Input.GetButtonDown("Jump") && !isAttacking)
         {
             jump = true;
             animator.SetBool("isJumping", true);
         }
 
-        if (Input.GetButtonDown("Crouch") && !isAttacking)  // Allow crouching only if not attacking
+        if (Input.GetButtonDown("Crouch") && !isAttacking)
         {
             crouch = true;
             runSpeed = 0f;
@@ -74,21 +79,25 @@ public class PlayerMovement : MonoBehaviour
 
     public void StopMovement()
     {
-        // Stop the player's horizontal movement immediately
         horizontalMove = 0f;
         controller.Move(0, crouch, jump);  // Apply zero movement to stop sliding
     }
 
     void FixedUpdate()
     {
-        // Character movement
-        if (!isAttacking)  // Move the character only if not attacking
+        if (isDead)
+        {
+            // Stop the player if dead
+            controller.Move(0, crouch, jump);
+            return;
+        }
+
+        if (!isAttacking)
         {
             controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         }
         else
         {
-            // Stop the player if they are attacking
             controller.Move(0, crouch, jump);
         }
         jump = false;
