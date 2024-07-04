@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkeletonWalk : StateMachineBehaviour
 {
     public float speed = 0.1f;
-    public float attackRange = 1f;
+    public float attackRange = 2f;
 
     private Transform player;
     private Rigidbody2D rb;
