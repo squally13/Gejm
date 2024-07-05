@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  attackRange: 1.01
-  detectionRange: 5
+  attackRange: 1.21
+  detectionRange: 8.01
   groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2

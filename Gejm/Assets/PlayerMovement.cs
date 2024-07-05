@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    public GameObject background;
+
     public bool isAttacking = false;  // Variable to check if attacking
     public bool isDead = false;  // Variable to check if dead
 
@@ -54,6 +56,15 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
             runSpeed = 40f;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "WIN")
+        {
+            background.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
