@@ -6,6 +6,7 @@ public class SkeletonController : MonoBehaviour
 {
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public float detectionRange = 5f;  // Expose the detection range in the Inspector
 
     private Animator animator;
 
@@ -21,6 +22,7 @@ public class SkeletonController : MonoBehaviour
         {
             behaviour.groundCheck = groundCheck;
             behaviour.groundLayer = groundLayer;
+            behaviour.detectionRange = detectionRange;  // Assign the detection range
         }
     }
 }
