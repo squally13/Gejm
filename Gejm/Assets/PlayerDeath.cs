@@ -6,6 +6,7 @@ public class PlayerDeath : MonoBehaviour
 {
     public Animator animator;
     private PlayerMovement playerMovement;  // Reference to PlayerMovement
+    public GameManager gameManager;
 
     void Start()
     {
@@ -35,6 +36,8 @@ public class PlayerDeath : MonoBehaviour
         {
             yield return null;
         }
+
+        gameManager.gameOver();
 
         animator.speed = 0;
     }
