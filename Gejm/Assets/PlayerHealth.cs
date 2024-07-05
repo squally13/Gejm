@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public int health = 100;
-
     public GameObject deathEffect;
+    public Animator animator;
+    private PlayerMovement playerMovement;
+
+    private bool isDead;
+    
+    public GameManager gameManager;
+
+    void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -16,15 +25,34 @@ public class PlayerHealth : MonoBehaviour
 
         StartCoroutine(DamageAnimation());
 
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
+            isDead = true;
             Die();
         }
     }
 
     void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        animator.SetBool("isDead", true);
+        playerMovement.isDead = true;
+        StartCoroutine(HandleDeath());
+    }
+
+    IEnumerator HandleDeath()
+    {
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("death"))
+        {
+            yield return null;
+        }
+
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+        {
+            yield return null;
+        }
+
+        gameManager.gameOver();
+        Debug.Log("Dead and GameOver");
     }
 
     IEnumerator DamageAnimation()
@@ -52,5 +80,4 @@ public class PlayerHealth : MonoBehaviour
             yield return new WaitForSeconds(.1f);
         }
     }
-
 }
