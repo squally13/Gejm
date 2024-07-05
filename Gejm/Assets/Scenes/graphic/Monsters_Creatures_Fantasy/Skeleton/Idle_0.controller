@@ -143,6 +143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   attackRange: 1.01
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

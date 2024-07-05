@@ -9,7 +9,13 @@ public class SkeletonWalk : StateMachineBehaviour
 
     private Transform player;
     private Rigidbody2D rb;
-    FlipEnemy flipenemy;
+    private FlipEnemy flipenemy;
+
+    [HideInInspector] public Transform groundCheck;  // Make these public and assign them at runtime
+    [HideInInspector] public LayerMask groundLayer;
+    private float checkRadius = 0.1f;  // Radius for the ground check
+
+    private bool isGrounded;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -24,10 +30,16 @@ public class SkeletonWalk : StateMachineBehaviour
     {
         flipenemy.LookAtPlayer();
 
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+        // Check if the groundCheck is touching the ground layer
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
 
-        rb.MovePosition(newPos);
+        if (isGrounded)
+        {
+            Vector2 target = new Vector2(player.position.x, rb.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+
+            rb.MovePosition(newPos);
+        }
 
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
@@ -39,8 +51,5 @@ public class SkeletonWalk : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Attack");
-        
     }
-
-
 }
